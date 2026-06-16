@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Moments 💕</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Quicksand:wght@600;700&display=swap');
+
+        :root {
+            --bg-light: #fff5f7;       /* Soft pastel canvas background */
+            --card-bg: #ffffff;        /* Pure white for clean contrast */
+            --primary-pink: #ff6594;   /* Cool bubblegum pink */
+            --accent-purple: #9c8dfb;  /* Vibrant retro purple */
+            --text-main: #332637;      /* Clean, deep charcoal ink */
+            --border-dark: #201724;    /* Thick comic-book line art border */
+            --grid-color: rgba(32, 23, 36, 0.03);
+        }
+
+        body {
+            /* Cool, clean retro grid pattern */
+            background-color: var(--bg-light);
+            background-image: linear-gradient(var(--grid-color) 2px, transparent 2px),
+                              linear-gradient(90deg, var(--grid-color) 2px, transparent 2px);
+            background-size: 40px 40px;
+            color: var(--text-main);
+            font-family: 'Quicksand', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3.5rem; 
+            padding: 4rem 2rem;
+            min-height: 100vh;
+        }
+
+        /* Smooth, subtle floating physics to make it feel alive but clean */
+        @keyframes coolFloat {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: var(--card-bg);
+            padding: 2.5rem;
+            /* Stylized comic-frame curves */
+            border-radius: 32px;
+            border: 5px solid var(--border-dark); 
+            /* Solid 3D drop shadow */
+            box-shadow: 12px 12px 0px var(--border-dark); 
+            text-align: center;
+            animation: coolFloat 6s ease-in-out infinite;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Offset the float timing for the second container so they don't move in perfect sync */
+        .container:nth-child(2) {
+            animation-delay: -3s;
+        }
+
+        h1 {
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 700;
+            color: var(--primary-pink);
+            font-size: 3rem;
+            margin-top: 0;
+            margin-bottom: 2rem;
+            letter-spacing: 1px;
+            /* Bold 3D sticker pop text shadow */
+            text-shadow: 4px 4px 0px var(--border-dark);
+        }
+
+        /* Clean outer image frame configured perfectly for portrait shots */
+        .img-frame {
+            max-width: 420px;
+            width: 100%;
+            height: 520px;
+            border: 5px solid var(--border-dark);
+            border-radius: 20px;
+            margin: 0 auto 1.8rem auto;
+            box-shadow: 6px 6px 0px var(--border-dark);
+            overflow: hidden; 
+            background-color: var(--border-dark);
+            position: relative;
+        }
+
+        /* Portrait Image Styling */
+        .portrait-img {
+            width: 100%;
+            height: 100%;
+            /* Forces the viewport to zoom right past the embedded black borders */
+            object-fit: cover; 
+            object-position: center;
+            display: block;
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* Smooth comic pop animation on hover */
+        .container:hover .portrait-img {
+            transform: scale(1.05) rotate(1deg); 
+        }
+
+        .description {
+            font-size: 1.3rem;
+            line-height: 1.7;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 1.5rem;
+            padding: 1.2rem 1.5rem;
+            background: #fffcf2; /* Clean cream backing for readability */
+            border: 4px dashed var(--border-dark);
+            border-radius: 18px;
+        }
+
+        .back-btn {
+            background: var(--accent-purple);
+            color: white;
+            padding: 14px 45px;
+            border: 4px solid var(--border-dark);
+            border-radius: 50px;
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 5px 5px 0 var(--border-dark);
+            /* Bouncy click feel */
+            transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+
+        /* Button hover animation turns pink and pops out */
+        .back-btn:hover {
+            background: var(--primary-pink);
+            transform: scale(1.08) translateY(-4px);
+            box-shadow: 8px 8px 0 var(--border-dark);
+        }
+
+        .back-btn:active {
+            transform: scale(0.96) translateY(3px);
+            box-shadow: 2px 2px 0 var(--border-dark);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Vermosa</h1>
+        
+        <div class="img-frame">
+            <img src="vermosa1.jpg" alt="Special Moment" class="portrait-img">
+        </div>
+        
+         <div class="description">
+            <p>Description</p>
+        </div>
+    </div>
+
+     <div class="container">
+        <h1>title</h1>
+        
+        <div class="img-frame">
+            <img src="vermosa2.jpg" alt="Special Moment" class="portrait-img">
+        </div>
+        
+        <div class="description">
+            <p>Description</p>
+        </div>
+    </div>
+
+    <a href="index.html" class="back-btn">Home</a>
+
+</body>
+</html>

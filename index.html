@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Website ni MaeeEEeemMmMmmMmm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <style>
+        /* Imported bubbly playful font (Fredoka) alongside elegant typography */
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Playfair+Display:wght@700&family=Quicksand:wght@500;700&display=swap');
+
+        :root {
+          --Fredoka: 'Fredoka', sans-serif; /* Soft cartoonic font */
+          --Playfair: 'Playfair Display', serif; /* Elegant title touch */
+          --Quicksand: 'Quicksand', sans-serif; /* Readable secondary font */
+          
+          /* Simple, Crisp & Eye-catching Palette */
+          --bg-light: #fff5f7;       /* Soft baby-pink blush canvas */
+          --card-bg: #ffffff;        /* Pure white for card contrast */
+          --primary-pink: #ff6594;   /* Vivid bubblegum for focal highlights */
+          --accent-purple: #9c8dfb;  /* Cool pastel contrast accent */
+          --text-main: #4a3e4d;      /* Deep soft cocoa for cartoon readability */
+          --border-dark: #2d2430;    /* Solid line art cartoon border */
+      }
+      
+      * {
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+          font-family: var(--Quicksand);
+      }
+      
+      body {
+          line-height: 1.6;
+          color: var(--text-main);
+          background-color: var(--bg-light);
+      }
+      
+      .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 1.5rem;
+      }
+      
+      /* Header & Hero Background */
+      header {
+          min-height: 100vh;
+          background: linear-gradient(rgba(255, 245, 247, 0.75), rgba(255, 255, 255, 0.85)), 
+                      url(https://images.unsplash.com/photo-1518199266791-c399a9560528?q=80&w=1600&auto=format&fit=crop) center/cover no-repeat fixed;
+          display: flex;
+          flex-direction: column;
+      }
+      
+      .navbar {
+          background: var(--card-bg);
+          padding: 1.2rem;
+          border-bottom: 4px solid var(--border-dark); /* Defined cartoon-style bottom stroke */
+          box-shadow: 0 4px 0 rgba(0,0,0,0.05);
+      }
+      
+      .navbar-brand {
+          color: var(--primary-pink);
+          font-size: 2.2rem;
+          text-align: center;
+          text-decoration: none;
+          font-family: var(--Fredoka);
+          font-weight: 700;
+          display: block;
+          transition: transform 0.2s ease;
+      }
+
+      .navbar-brand:hover {
+          transform: scale(1.05) rotate(-1deg);
+      }
+      
+      .banner {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          padding: 2rem 0;
+      }
+      
+      .banner-title {
+          font-size: 3.8rem;
+          font-family: var(--Fredoka);
+          font-weight: 700;
+          line-height: 1.2;
+          color: var(--primary-pink);
+          /* Stacked text shadows for an illustrative 3D sticker look */
+          text-shadow: 3px 3px 0px var(--border-dark), 6px 6px 0px rgba(255,101,148,0.2);
+          margin-bottom: 1rem;
+      }
+      
+      .banner p {
+          padding: 0.5rem 0 2rem 0;
+          font-size: 1.3rem;
+          font-family: var(--Fredoka);
+          font-weight: 600;
+          letter-spacing: 0.5px;
+          color: var(--accent-purple);
+      }
+      
+      /* Simple Sticker Search Bar */
+      .banner form {
+          background: var(--card-bg);
+          border-radius: 50px;
+          padding: 0.5rem 0.7rem 0.5rem 1.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border: 4px solid var(--border-dark);
+          box-shadow: 5px 5px 0px var(--border-dark); /* Thick pop art shadow */
+          max-width: 550px;
+          margin: 0 auto;
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      
+      .banner form:focus-within {
+          transform: translate(-2px, -2px);
+          box-shadow: 7px 7px 0px var(--border-dark);
+      }
+      
+      .search-input {
+          font-family: var(--Quicksand);
+          font-weight: 700;
+          font-size: 1.1rem;
+          width: 100%;
+          outline: 0;
+          border: none;
+          color: var(--text-main);
+          background: transparent;
+      }
+      
+      .search-input::placeholder {
+          color: #bfaec2;
+      }
+      
+      .search-btn {
+          width: 46px;
+          height: 46px;
+          font-size: 1.1rem;
+          color: #ffffff;
+          border: 3px solid var(--border-dark);
+          background: var(--accent-purple);
+          outline: 0;
+          cursor: pointer;
+          border-radius: 50%;
+          transition: all 0.2s ease;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+      
+      .search-btn:hover {
+          background-color: var(--primary-pink);
+          transform: scale(1.05);
+      }
+      
+      /* Main Content Grid Styling */
+      .design {
+          padding: 5rem 0;
+      }
+      
+      .title {
+          text-align: center;
+          margin-bottom: 3.5rem;
+      }
+      
+      .title h2 {
+          font-family: var(--Fredoka);
+          font-weight: 700;
+          font-size: 2.5rem;
+          color: var(--primary-pink);
+          text-shadow: 2px 2px 0px #fff, 4px 4px 0px rgba(0,0,0,0.05);
+          line-height: 1.3;
+          margin-bottom: 0.8rem;
+      }
+      
+      .title p {
+          font-family: var(--Quicksand);
+          font-weight: 700;
+          font-size: 1.1rem;
+          color: var(--text-main);
+          opacity: 0.8;
+      }
+      
+      .design-content {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          gap: 2.5rem;
+      }
+      
+      /* Cartoon Card Layout */
+      .design-item {
+          background: var(--card-bg);
+          border-radius: 24px;
+          overflow: hidden;
+          border: 4px solid var(--border-dark);
+          box-shadow: 6px 6px 0px var(--border-dark); /* Bold pop art card drop shadow */
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+          display: flex;
+          flex-direction: column;
+      }
+      
+      .design-item.hide-item {
+          display: none;
+      }
+      
+      .design-item:hover {
+          transform: translate(-4px, -4px);
+          box-shadow: 10px 10px 0px var(--border-dark);
+      }
+      
+      .design-img {
+          position: relative;
+          overflow: hidden;
+          padding: 12px 12px 0 12px;
+      }
+      
+      .design-img img {
+          width: 100%;
+          height: 220px;
+          object-fit: cover;
+          border-radius: 16px;
+          border: 3px solid var(--border-dark);
+          transition: transform 0.3s ease;
+      }
+      
+      .design-item:hover .design-img img {
+          transform: scale(1.03) rotate(1deg);
+      }
+      
+      /* Heart Badge Overlay */
+      .design-img span:first-of-type {
+          position: absolute;
+          z-index: 2;
+          top: 24px;
+          left: 24px;
+          color: #fff;
+          background-color: var(--primary-pink);
+          border: 3px solid var(--border-dark);
+          width: 42px;
+          height: 42px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          font-size: 1.2rem;
+          box-shadow: 2px 2px 0 var(--border-dark);
+      }
+      
+      .design-title {
+          padding: 1.5rem;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          flex-grow: 1;
+      }
+      
+      .design-title a {
+          color: var(--text-main);
+          text-decoration: none;
+          text-transform: capitalize;
+          font-family: var(--Fredoka);
+          font-weight: 600;
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
+          display: inline-block;
+          transition: color 0.2s;
+      }
+      
+      .design-title a:hover {
+          color: var(--primary-pink);
+      }
+      
+      /* Soft Cartoonic Button */
+      button.click-btn {
+          width: 85%;
+          padding: 10px 12px;
+          color: #ffffff;
+          background-color: var(--accent-purple);
+          border: 3px solid var(--border-dark);
+          border-radius: 16px;
+          cursor: pointer;
+          font-family: var(--Fredoka);
+          font-weight: 600;
+          font-size: 0.95rem; 
+          box-shadow: 3px 3px 0 var(--border-dark);
+          transition: all 0.15s ease;
+      }
+      
+      button.click-btn:hover {
+          background-color: var(--primary-pink);
+          transform: translateY(-2px);
+          box-shadow: 5px 5px 0 var(--border-dark);
+      }
+      
+      button.click-btn:active {
+          transform: translateY(2px);
+          box-shadow: 1px 1px 0 var(--border-dark);
+      }
+
+      #no-results-msg {
+          text-align: center;
+          font-family: var(--Fredoka);
+          font-size: 1.5rem;
+          color: var(--primary-pink);
+          grid-column: 1 / -1;
+          display: none;
+          padding: 3rem;
+          font-weight: 600;
+      }
+      
+      /* Clean Elegant Footer with a Bold Outline Line */
+      footer {
+          background: #ffffff;
+          color: var(--text-main);
+          text-align: center;
+          padding: 4rem 0;
+          border-top: 4px solid var(--border-dark);
+          margin-top: 4rem;
+      }
+      
+      .social-links {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 1.5rem;
+      }
+      
+      .social-links a {
+          border: 3px solid var(--border-dark);
+          color: var(--text-main);
+          width: 48px;
+          height: 48px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          text-decoration: none;
+          margin: 0 0.6rem;
+          background-color: #fff;
+          font-size: 1.2rem;
+          box-shadow: 3px 3px 0 var(--border-dark);
+          transition: all 0.2s ease;
+      }
+      
+      .social-links a:hover {
+          background: var(--primary-pink);
+          color: #fff;
+          transform: scale(1.1) rotate(5deg);
+          box-shadow: 4px 4px 0 var(--border-dark);
+      }
+      
+      .footer span {
+          margin-top: 1rem;
+          display: block;
+          font-family: var(--Fredoka);
+          font-weight: 700;
+          font-size: 1.6rem;
+          color: var(--primary-pink);
+          text-shadow: 1px 1px 0px var(--border-dark);
+      }
+
+      .footer p {
+          font-size: 0.95rem;
+          margin-top: 0.5rem;
+          font-weight: 700;
+          opacity: 0.7;
+      }
+      
+      /* Clean Responsive Breakpoints */
+      @media screen and (min-width: 576px) {
+          .banner-title { font-size: 4.5rem; }
+          .design-content { grid-template-columns: repeat(2, 1fr); }
+      }
+      
+      @media screen and (min-width: 768px) {
+          .navbar .container {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+          }
+          .design-content { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+      }
+      
+      @media screen and (min-width: 1200px) {
+          .design-content { grid-template-columns: repeat(4, 1fr); gap: 2.2rem; }
+      }
+        
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <nav class="navbar">
+        <div class="container">
+          <a href="index.html" class="navbar-brand">IM SAURR NAUUHAW NAAAAA SIrRrrRrRrrRRRR</a>
+        </div>
+      </nav>
+      <div class="banner">
+        <div class="container">
+          <h1 class="banner-title">BUCKET LIST NATEN SA PILIPINAS NA DI NAUNLAD</h1>
+          <form id="search-form">
+            <input type="text" id="search-box" class="search-input" placeholder="Search the following shiii listed below..." />
+            <button type="submit" class="search-btn">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <section class="design" id="design">
+      <div class="container">
+        <div class="title">
+          <h2>ENJOIIIIIIIIIII</h2>
+          <p>(JUST APPRECIATE POOOOOOOO THANKS <3)</p>
+        </div>
+        
+        <div class="design-content" id="items-grid">
+          <div id="no-results-msg"></div>
+          
+          <!-- Card 1 -->
+          <div class="design-item">
+            <div class="design-img">
+                <img src="1.gif" alt="Gift item 1">
+                <span><i class="fas fa-heart"></i></span>
+            </div>
+            <div class="design-title">
+                <a href="southmall.html">Southmall</a>
+                <button class="click-btn" onclick="window.location.href='southmall.html'">paki pindot sirRRRrRR</button>
+            </div>
+          </div>
+          
+          <!-- Card 2 -->
+          <div class="design-item">
+            <div class="design-img">
+                <img src="5.gif" alt="Gift item 2">
+                <span><i class="fas fa-heart"></i></span>
+            </div>
+            <div class="design-title">
+                <a href="walking.html">Walking</a>
+                <button class="click-btn" onclick="window.location.href='walking.html'">paki pindot sirRRRrRR</button>
+            </div>
+          </div>
+          
+          <!-- Card 3 -->
+          <div class="design-item">
+            <div class="design-img">
+                <img src="tagaytay.gif" alt="Gift item 3">
+                <span><i class="fas fa-heart"></i></span>
+            </div>
+            <div class="design-title">
+                <a href="tagaytay.html">Tagaytay</a>
+                <button class="click-btn" onclick="window.location.href='tagaytay.html'">paki pindot sirRRRrRR</button>
+            </div>
+          </div>
+          
+          <!-- Card 4 -->
+          <div class="design-item">
+            <div class="design-img">
+                <img src="2.gif" alt="Gift item 4">
+                <span><i class="fas fa-heart"></i></span>
+            </div>
+            <div class="design-title">
+                <a href="kkv.html">KKV</a>
+                <button class="click-btn" onclick="window.location.href='kkv.html'">paki pindot sirRRRrRR</button>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="design-item">
+            <div class="design-img">
+                <img src="vermo.gif" alt="Gift item 5">
+                <span><i class="fas fa-heart"></i></span>
+            </div>
+            <div class="design-title">
+                <a href="vermosa.html">Vermosa</a>
+                <button class="click-btn" onclick="window.location.href='vermosa.html'">paki pindot sirRRRrRR</button>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="design-item">
+            <div class="design-img">
+                <img src="eating.gif" alt="Gift item 6">
+                <span><i class="fas fa-heart"></i></span>
+            </div>
+            <div class="design-title">
+                <a href="streetfoods.html">Streetfoods</a>
+                <button class="click-btn" onclick="window.location.href='streetfoods.html'">paki pindot sirRRRrRR</button>
+            </div>
+          </div>
+           <div class="design-item">
+            <div class="design-img">
+                <img src="photo.gif" alt="Gift item 7">
+                <span><i class="fas fa-heart"></i></span>
+            </div>
+            <div class="design-title">
+                <a href="photobooth.html">Photobooth</a>
+                <button class="click-btn" onclick="window.location.href='photobooth.html'">paki pindot sirRRRrRR</button>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="design-item">
+            <div class="design-img">
+                <img src="clay.gif" alt="Gift item 8">
+                <span><i class="fas fa-heart"></i></span>
+            </div>
+            <div class="design-title">
+                <a href="clay.html">Clay</a>
+                <button class="click-btn" onclick="window.location.href='clay.html'">paki pindot sirRRRrRR</button>
+            </div>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="design-item">
+            <div class="design-img">
+                <img src="drink.gif" alt="Gift item 9">
+                <span><i class="fas fa-heart"></i></span>
+            </div>
+            <div class="design-title">
+                <a href="iinom.html">IINOM</a>
+                <button class="click-btn" onclick="window.location.href='iinom.html'">paki pindot sirRRRrRR</button>
+            </div>
+          </div>
+
+          <!-- Card 9 -->
+          <div class="design-item">
+            <div class="design-img">
+                <img src="baking.gif" alt="Gift item 10">
+                <span><i class="fas fa-heart"></i></span>
+            </div>
+            <div class="design-title">
+                <a href="makingDesserts.html">Making desserts</a>
+                <button class="click-btn" onclick="window.location.href='makingDesserts.html'">paki pindot sirRRRrRR</button>
+            </div>
+          </div>
+
+          <!-- Card 10 -->
+          <div class="design-item">
+            <div class="design-img">
+                <img src="pizza.gif" alt="Gift item 11">
+                <span><i class="fas fa-heart"></i></span>
+            </div>
+            <div class="design-title">
+                <a href="DIY Pizza.html">DIY pizza</a>
+                <button class="click-btn" onclick="window.location.href='DIY Pizza.html'">paki pindot sirRRRrRR</button>
+            </div>
+          </div>
+          <!-- Card 12 -->
+          <div class="design-item">
+            <div class="design-img">
+                <img src="slime.gif" alt="Gift item 12">
+                <span><i class="fas fa-heart"></i></span>
+            </div>
+            <div class="design-title">
+                <a href="DIY Slime.html">Diy Slime</a>
+                <button class="click-btn" onclick="window.location.href='DIY Slime.html'">paki pindot sirRRRrRR</button>
+            </div>
+          </div>
+
+          <!-- Card 13 -->
+          <div class="design-item">
+            <div class="design-img">
+                <img src="foodtrip.gif" alt="Gift item 13">
+                <span><i class="fas fa-heart"></i></span> 
+            </div>
+            <div class="design-title">
+                <a href="foodtrip.html">Foodtrip</a>
+                <button class="click-btn" onclick="window.location.href='foodtrip.html'">paki pindot sirRRRrRR</button>
+            </div>
+          </div>
+
+          <!-- Card 14 -->
+          <div class="design-item">
+            <div class="design-img">
+                <img src="cooking.gif" alt="Gift item 14">
+                <span><i class="fas fa-heart"></i></span>
+            </div>
+            <div class="design-title">
+                <a href="cooking.html">Cooking</a>
+                <button class="click-btn" onclick="window.location.href='cooking.html'">paki pindot sirRRRrRR</button>
+            </div>
+          </div>
+
+          <!-- Card 15 -->
+          <div class="design-item">
+            <div class="design-img">
+                <img src="tambay.gif" alt="Gift item 15">
+                <span><i class="fas fa-heart"></i></span>
+            </div>
+            <div class="design-title">
+                <a href="tambay.html">Tambay</a>
+                <button class="click-btn" onclick="window.location.href='tambay.html'">paki pindot sirRRRrRR</button>
+            </div>
+          </div>
+
+          <!-- Card 16 -->
+          <div class="design-item">
+            <div class="design-img">
+                <img src="lego.gif" alt="Gift item 16">
+                <span><i class="fas fa-heart"></i></span>
+            </div>
+            <div class="design-title">
+                <a href="lego.html">Lego</a>
+                <button class="click-btn" onclick="window.location.href='lego.html'">paki pindot sirRRRrRR</button>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+        <div class="container footer">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <span>halauuuurrrrrr🧸</span>
+            <p>&copy; 2026 Gorjass MaeEEEeeEeEEMMm Jhonna Reinne.</p>
+        </div>
+    </footer>
+
+    <script>
+      const searchForm = document.getElementById('search-form');
+      const searchBox = document.getElementById('search-box');
+      const designItems = document.querySelectorAll('.design-item');
+      const noResultsMsg = document.getElementById('no-results-msg');
+
+      function performSearch(event) {
+        if(event) event.preventDefault(); 
+        
+        const filterText = searchBox.value.toLowerCase().trim();
+        let visibleCount = 0;
+
+        designItems.forEach(item => {
+          const titleText = item.querySelector('.design-title a').innerText.toLowerCase();
+          
+          if (titleText.includes(filterText)) {
+            item.classList.remove('hide-item');
+            visibleCount++;
+          } else {
+            item.classList.add('hide-item');
+          }
+        });
+
+        if (visibleCount === 0) {
+          noResultsMsg.style.display = 'block';
+        } else {
+          noResultsMsg.style.display = 'none';
+        }
+
+        if (filterText !== "") {
+          document.getElementById('design').scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+
+      searchForm.addEventListener('submit', performSearch);
+      searchBox.addEventListener('input', performSearch);
+    </script>
+
+  </body>
+</html>

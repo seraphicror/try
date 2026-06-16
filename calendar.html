@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Big Countdown! 🎉</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Quicksand:wght@600;700&display=swap');
+
+        :root {
+            --bg-light: #fff5f7;       /* Soft pastel canvas background */
+            --card-bg: #ffffff;        /* Pure white for clean contrast */
+            --primary-pink: #ff6594;   /* Cool bubblegum pink */
+            --accent-purple: #9c8dfb;  /* Vibrant retro purple */
+            --text-main: #332637;      /* Clean, deep charcoal ink */
+            --border-dark: #201724;    /* Thick comic-book line art border */
+            --grid-color: rgba(32, 23, 36, 0.03);
+        }
+
+        body {
+            /* Cool, clean retro grid pattern */
+            background-color: var(--bg-light);
+            background-image: linear-gradient(var(--grid-color) 2px, transparent 2px),
+                              linear-gradient(90deg, var(--grid-color) 2px, transparent 2px);
+            background-size: 40px 40px;
+            color: var(--text-main);
+            font-family: 'Quicksand', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            min-height: 100vh;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        @keyframes coolFloat {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .container {
+            max-width: 700px;
+            width: 100%;
+            background: var(--card-bg);
+            padding: 3rem 2rem;
+            border-radius: 32px;
+            border: 5px solid var(--border-dark); 
+            box-shadow: 12px 12px 0px var(--border-dark); 
+            text-align: center;
+            animation: coolFloat 6s ease-in-out infinite;
+        }
+
+        h1 {
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 700;
+            color: var(--primary-pink);
+            font-size: 2.8rem;
+            margin-top: 0;
+            margin-bottom: 2.5rem;
+            letter-spacing: 1px;
+            text-shadow: 4px 4px 0px var(--border-dark);
+        }
+
+        /* Countdown Board Layout */
+        .countdown-board {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        /* Individual Sticker Blocks for Numbers */
+        .time-box {
+            background: #fffcf2; /* Cream color */
+            border: 4px solid var(--border-dark);
+            border-radius: 18px;
+            padding: 1rem 0.5rem;
+            box-shadow: 5px 5px 0px var(--border-dark);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .time-box .number {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--accent-purple);
+            text-shadow: 2px 2px 0px var(--border-dark);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .time-box .label {
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-main);
+        }
+
+        /* Target Date Display Banner */
+        .target-message {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: #eefcfd; 
+            border: 3px dashed var(--border-dark);
+            border-radius: 12px;
+        }
+
+        .back-btn {
+            background: var(--accent-purple);
+            color: white;
+            padding: 14px 45px;
+            border: 4px solid var(--border-dark);
+            border-radius: 50px;
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 5px 5px 0 var(--border-dark);
+            transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .back-btn:hover {
+            background: var(--primary-pink);
+            transform: scale(1.08) translateY(-4px);
+            box-shadow: 8px 8px 0 var(--border-dark);
+        }
+
+        .back-btn:active {
+            transform: scale(0.96) translateY(3px);
+            box-shadow: 2px 2px 0 var(--border-dark);
+        }
+
+        /* Responsive scaling for small mobile screens */
+        @media (max-width: 500px) {
+            .countdown-board {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            h1 {
+                font-size: 2.2rem;
+            }
+            .time-box .number {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>count DOWNNNN🗓️</h1>
+
+        <div class="countdown-board">
+            <div class="time-box">
+                <span class="number" id="days">00</span>
+                <span class="label">Nigga Days</span>
+            </div>
+            <div class="time-box">
+                <span class="number" id="hours">00</span>
+                <span class="label">Nigga Hours</span>
+            </div>
+            <div class="time-box">
+                <span class="number" id="minutes">00</span>
+                <span class="label">Nigga Mins</span>
+            </div>
+            <div class="time-box">
+                <span class="number" id="seconds">00</span>
+                <span class="label">Nigga Secs</span>
+            </div>
+        </div>
+
+        <div class="target-message">
+            Target Date: December 27, 2026 
+        </div>
+
+        <div>
+            <a href="index.html" class="back-btn">Home</a>
+        </div>
+    </div>
+
+    <script>
+        // Set the exact target date to count down to
+        const targetDate = new Date("December 27, 2026 00:00:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            // Simple time math logic
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Print values to the page (adding a leading 0 if number is less than 10)
+            document.getElementById("days").innerText = days < 10 ? "0" + days : days;
+            document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
+            document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+            document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+
+            // When the countdown ends, show a celebratory message instead of zeros
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.querySelector(".countdown-board").innerHTML = "<div style='font-family: \"Fredoka\", sans-serif; font-size: 2.5rem; color: var(--primary-pink); width: 100%; grid-column: span 4;'>It's Finally Here! 🎉💖</div>";
+            }
+        }
+
+        // Run calculation once right away, then keep ticking every 1 second
+        updateCountdown();
+        const countdownInterval = setInterval(updateCountdown, 1000);
+    </script>
+
+</body>
+</html>
