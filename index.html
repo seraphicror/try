@@ -390,7 +390,46 @@
       
       @media screen and (min-width: 1200px) {
           .design-content { grid-template-columns: repeat(4, 1fr); gap: 2.2rem; }
+          
       }
+      /* Container to center the button */
+    .banner-action-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 1.5rem; /* Adjusts distance below the search bar */
+    }
+
+    /* Your custom style adapted for the middle button */
+    .middle-btn {
+        background: var(--accent-purple);
+        color: white;
+        padding: 14px 45px;
+        border: 4px solid var(--border-dark);
+        border-radius: 50px;
+        font-family: 'Fredoka', sans-serif;
+        font-size: 1.3rem;
+        font-weight: 700;
+        cursor: pointer;
+        box-shadow: 5px 5px 0 var(--border-dark);
+        text-decoration: none;
+        display: inline-block;
+        
+        /* Bouncy click feel */
+        transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    /* Button hover animation turns pink and pops out */
+    .middle-btn:hover {
+        background: var(--primary-pink);
+        transform: scale(1.08) translateY(-4px);
+        box-shadow: 8px 8px 0 var(--border-dark);
+    }
+
+    .middle-btn:active {
+        transform: scale(0.96) translateY(3px);
+        box-shadow: 2px 2px 0 var(--border-dark);
+    }
         
     </style>
   </head>
@@ -402,18 +441,22 @@
           <a href="index.html" class="navbar-brand">IM SAURR NAUUHAW NAAAAA SIrRrrRrRrrRRRR</a>
         </div>
       </nav>
-      <div class="banner">
-        <div class="container">
-          <h1 class="banner-title">BUCKET LIST NATEN SA PILIPINAS NA DI NAUNLAD</h1>
-          <form id="search-form">
-            <input type="text" id="search-box" class="search-input" placeholder="Search the following shiii listed below..." />
-            <button type="submit" class="search-btn">
-              <i class="fas fa-search"></i>
-            </button>
-          </form>
-        </div>
-      </div>
-    </header>
+    <div class="banner">
+  <div class="container">
+    <h1 class="banner-title">BUCKET LIST NATEN SA PILIPINAS NA DI NAUNLAD</h1>
+    <form id="search-form">
+      <input type="text" id="search-box" class="search-input" placeholder="Search the following shiii listed below..." />
+      <button type="submit" class="search-btn">
+        <i class="fas fa-search"></i>
+      </button>
+    </form>
+    
+   <div class="banner-action-container">
+      <a href="calendar.html" class="middle-btn">Count DOWNNNNNNN</a>
+    </div>
+  </div>
+</div>
+</header>
 
     <section class="design" id="design">
       <div class="container">
@@ -444,7 +487,7 @@
                 <span><i class="fas fa-heart"></i></span>
             </div>
             <div class="design-title">
-                <a href="walking.html">Walking</a>
+                <a href="walking.html">Claw Machine</a>
                 <button class="click-btn" onclick="window.location.href='walking.html'">paki pindot sirRRRrRR</button>
             </div>
           </div>
@@ -538,7 +581,7 @@
                 <span><i class="fas fa-heart"></i></span>
             </div>
             <div class="design-title">
-                <a href="makingDesserts.html">Making desserts</a>
+                <a href="makingDesserts.html">Desserts</a>
                 <button class="click-btn" onclick="window.location.href='makingDesserts.html'">paki pindot sirRRRrRR</button>
             </div>
           </div>
@@ -550,7 +593,7 @@
                 <span><i class="fas fa-heart"></i></span>
             </div>
             <div class="design-title">
-                <a href="DIY Pizza.html">DIY pizza</a>
+                <a href="DIY Pizza.html">Pizza</a>
                 <button class="click-btn" onclick="window.location.href='DIY Pizza.html'">paki pindot sirRRRrRR</button>
             </div>
           </div>
@@ -561,7 +604,7 @@
                 <span><i class="fas fa-heart"></i></span>
             </div>
             <div class="design-title">
-                <a href="DIY Slime.html">Diy Slime</a>
+                <a href="DIY Slime.html">Slime</a>
                 <button class="click-btn" onclick="window.location.href='DIY Slime.html'">paki pindot sirRRRrRR</button>
             </div>
           </div>
